@@ -1,4 +1,4 @@
-﻿@model djMoney.Models.BaseConnect
+﻿@model djMoney.Models.Article
 
 @{
     ViewBag.Title = "Index";
@@ -6,5 +6,22 @@
 
 <h2>Index</h2>
 
-@Model.art[0].Title
+@for (int i = 0; i < ViewBag.ArtCount; i++){
+    <div class="col-lg-pull-8 nav-pills">
+        <div class="ArticleHeader">
+         <a href="" title="Прочитайте сразу" >@ViewBag.Art[i].Title</a> 
+        </div>
+        <div class="col-lg-pull-8">
+          @ViewBag.Art[i].post_date
+        </div>
+        <div class="col-lg-pull-8 nav-pills ">
+           @ViewBag.Art[i].Context
+        </div>
+        <ul class="nav nav-pills">
+            <li class="active">@Html.ActionLink("57 $", "Index", "Home")</li>
+            <li>@Html.ActionLink("Нравится", "Index", "Home")</li>
+
+        </ul>
+    </div>
+}
 

@@ -20,8 +20,9 @@ namespace djMoney.Controllers
             art.post_date = DateTime.Now.ToString();*/
             BaseConnect conn = new BaseConnect();
             Article[] art = conn.SelStory("SELECT * FROM story LIMIT 10");
-            
-            return View(art);
+            ViewBag.Art = art;
+            ViewBag.ArtCount = art.Count();
+            return View();
         }
 
         public ActionResult ArtSelect()
