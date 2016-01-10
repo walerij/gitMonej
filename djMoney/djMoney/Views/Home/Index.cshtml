@@ -4,21 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+
 
 @for (int i = 0; i < ViewBag.ArtCount; i++){
     <div class="col-lg-pull-8 nav-pills">
+        
         <div class="ArticleHeader">
-         <a href="" title="Прочитайте сразу" >@ViewBag.Art[i].Title</a> 
+            <div class="znk">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="" title="">@ViewBag.Art[i].price</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <a href="" title="Прочитайте сразу" >@ViewBag.Art[i].Title</a> 
         </div>
-        <div class="col-lg-pull-8">
+        <div class="col-lg-pull-8 ArticleDate">
           @ViewBag.Art[i].post_date
         </div>
-        <div class="col-lg-pull-8 nav-pills ">
+        <div class="col-lg-pull-8 nav-pills ArticleContent">
            @ViewBag.Art[i].Context
         </div>
-        <ul class="nav nav-pills">
-            <li class="active">@Html.ActionLink("57 $", "Index", "Home")</li>
+        <ul class="nav nav-pills ArticleLike">
+          
             <li>@Html.ActionLink("Нравится", "Index", "Home")</li>
 
         </ul>
