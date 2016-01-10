@@ -50,6 +50,7 @@ footer { clear:both;
     margin-left: 62px;
 }
 .znk { float: left; margin-top:0; margin-right: 10px;
+       padding-top:0;
        
 }
 .znk li {
@@ -58,4 +59,6 @@ footer { clear:both;
 .znk a {font-size: 12px;
     }
 .ArticleLike {margin-left: 62px;
+}
+.headerMy { background: #ffffff;
 }
