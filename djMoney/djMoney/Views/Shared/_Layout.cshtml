@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("На главную", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("1", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("3", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("4", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="header col-lg-12">
+            <div class="logo"></div>
+            <div class="poslovica alert-success">
+                <h2>Деньги решают всё!</h2>
+            </div>
+        </div>
+        @RenderBody()
+        <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+        <hr />
+
+        <footer>
+            <ul class="nav nav-pills">
+                <li class="active">@Html.ActionLink("Рассказать историю", "Index", "Home")</li>
+                <li>@Html.ActionLink("Случайная история", "Contact", "Home")</li>
+                <li>@Html.ActionLink("О проекте", "About", "Home")</li>
+               
+            </ul>
+            <p>&copy; @DateTime.Now.Year - djMoney</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
