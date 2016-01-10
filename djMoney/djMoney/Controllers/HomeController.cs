@@ -12,13 +12,22 @@ namespace djMoney.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            /*
             Article art = new Article();
 
             art.Title = "Заголовок 1";
             art.Context = "Здесь наш текст";
-            art.ArtDateTime = DateTime.Now.ToString();
+            art.post_date = DateTime.Now.ToString();*/
+            BaseConnect conn = new BaseConnect();
+            Article[] art = conn.SelStory("SELECT * FROM story LIMIT 10");
             
             return View(art);
+        }
+
+        public ActionResult ArtSelect()
+        {
+            return View();
+
         }
     }
 }

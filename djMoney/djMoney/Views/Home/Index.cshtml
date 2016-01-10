@@ -1,11 +1,10 @@
-﻿
+﻿@model djMoney.Models.BaseConnect
+
 @{
     ViewBag.Title = "Index";
 }
 
-@for (int i = 1; i < 6; i++)
-{
+<h2>Index</h2>
 
-    @Html.Partial("art2")
-}
-   
+@Model.art[0].Title
+
