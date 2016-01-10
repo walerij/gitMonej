@@ -30,7 +30,7 @@ footer { clear:both;
 .ArticleHeader, .ArticleHeader a {
     font: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
     font-size: 	27px;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 20px;
     margin-bottom: 10px;
     color: rgb(34,34,34)
@@ -38,8 +38,24 @@ footer { clear:both;
     .ArticleHeader a:hover {
         color: #ff6a00;
     }
+.ArticleDate {
+    font: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+    font-size: 	11px;
+    line-height: 18px;
+}
 .ArticleContent {
     font: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
     font-size: 16px;
     font-weight:400;
+    margin-left: 62px;
+}
+.znk { float: left; margin-top:0; margin-right: 10px;
+       
+}
+.znk li {
+        list-style: none;
+    }
+.znk a {font-size: 12px;
+    }
+.ArticleLike {margin-left: 62px;
 }

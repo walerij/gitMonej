@@ -18,11 +18,12 @@ namespace djMoney.Models
             
 
         }
-        public Article(string Title, string postdate, string Context)
+        public Article(string Title, string postdate, string Context, string price)
         {
             this.Title = Title;
             this.post_date = postdate;
             this.Context = Context;
+            this.price = price+" $ ";
 
         }
 

@@ -36,12 +36,13 @@ namespace djMoney.Models
             foreach (DataRow row in table.Rows)
             {
                 if (i == N) break;
-                art[i]= new Article(row["title"].ToString(), row["post_date"].ToString(), row["story"].ToString());
+                art[i]= new Article(row["title"].ToString(), row["post_date"].ToString(), row["story"].ToString(), row["likes"].ToString());
               
                 i++;
             }
             return art;
          }
+         
 
 
 

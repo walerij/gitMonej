@@ -142,7 +142,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\ArticleRepo.cs" />
     <Compile Include="Models\BaseConnect.cs" />
     <Compile Include="Models\ISql.cs" />
     <Compile Include="Models\MySQL.cs" />

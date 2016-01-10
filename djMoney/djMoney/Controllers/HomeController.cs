@@ -10,15 +10,11 @@ namespace djMoney.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        [HttpGet]
         public ActionResult Index()
-        {
-            /*
-            Article art = new Article();
-
-            art.Title = "Заголовок 1";
-            art.Context = "Здесь наш текст";
-            art.post_date = DateTime.Now.ToString();*/
+        {           
             BaseConnect conn = new BaseConnect();
+
             Article[] art = conn.SelStory("SELECT * FROM story LIMIT 10");
             ViewBag.Art = art;
             ViewBag.ArtCount = art.Count();
