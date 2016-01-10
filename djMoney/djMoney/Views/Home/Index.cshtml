@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<h2>@ViewBag.GetID</h2>
 
 
 @for (int i = 0; i < ViewBag.ArtCount; i++){
@@ -20,10 +20,10 @@
             </div>
             <a href="" title="Прочитайте сразу" >@ViewBag.Art[i].Title</a> 
         </div>
-        <div class="col-lg-pull-8 ArticleDate">
+        <div class="col-lg-pull-4 ArticleDate">
           @ViewBag.Art[i].post_date
         </div>
-        <div class="col-lg-pull-8 nav-pills ArticleContent">
+        <div class="col-lg-pull-4 nav-pills ArticleContent">
            @ViewBag.Art[i].Context
         </div>
         <ul class="nav nav-pills ArticleLike">

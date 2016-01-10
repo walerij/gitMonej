@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - djMoney</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -19,10 +19,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("На главную", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("1", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("1", "Index", "Home", new { area = "", id = 1 }, new { @class = "navbar-brand" })
                 @Html.ActionLink("2", "Index", "Home", new { area = "", id = 2 }, new { @class = "navbar-brand" })
-                @Html.ActionLink("3", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("4", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("3", "Index", "Home", new { area = "", id = 3 }, new { @class = "navbar-brand" })
+                @Html.ActionLink("4", "Index", "Home", new { area = "", id = 4 }, new { @class = "navbar-brand" })
                 
             </div>
             <div class="poslovica alert-success">
@@ -45,11 +45,11 @@
         @RenderBody()
         <ul class="pagination">
             <li><a href="#">«</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
+            <li>@Html.ActionLink("1", "Index", "Home", new { area = "", id = 1 }, new { @class = "t1" } )</li>
+            <li>@Html.ActionLink("2", "Index", "Home", new { area = "", id = 2 }, new { @class = "t1" })</li>
+            <li>@Html.ActionLink("3", "Index", "Home", new { area = "", id = 3 }, new { @class = "t1" })</li>
+            <li>@Html.ActionLink("4", "Index", "Home", new { area = "", id = 4 }, new { @class = "t1" })</li>
+            <li>@Html.ActionLink("5", "Index", "Home", new { area = "", id = 5 }, new { @class = "t1" })</li>
             <li><a href="#">»</a></li>
         </ul>
         <hr />

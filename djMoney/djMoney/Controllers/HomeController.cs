@@ -14,8 +14,17 @@ namespace djMoney.Controllers
         public ActionResult Index()
         {           
             BaseConnect conn = new BaseConnect();
+            string query = "SELECT * FROM story LIMIT 10";
+          
+            string getID = (string)RouteData.Values["id"];
+            if (getID != null)
+            {
+                getID = (int.Parse(getID) * 10).ToString();
+                query = "SELECT * FROM story LIMIT "+getID+", 10";
 
-            Article[] art = conn.SelStory("SELECT * FROM story LIMIT 10");
+            }
+           
+            Article[] art = conn.SelStory(query);
             ViewBag.Art = art;
             ViewBag.ArtCount = art.Count();
             return View();
