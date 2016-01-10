@@ -1,0 +1,16 @@
+﻿@model djMoney.Models.Article
+<div class="col-lg-pull-8 nav-pills">
+    <h2>@Model.Title</h2>
+    <div class="col-lg-pull-8">
+        @Model.ArtDateTime
+    </div>
+    <div class="col-lg-pull-8 nav-pills">
+        @Model.Context
+    </div>
+    <ul class="nav nav-pills">
+        <li class="active">@Html.ActionLink("57 $", "Index", "Home")</li>
+        <li">@Html.ActionLink("Нравится", "Index", "Home") </li>
+
+    </ul>
+</div>
+
