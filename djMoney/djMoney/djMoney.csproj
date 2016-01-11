@@ -145,6 +145,7 @@
     <Compile Include="Models\BaseConnect.cs" />
     <Compile Include="Models\ISql.cs" />
     <Compile Include="Models\MySQL.cs" />
+    <Compile Include="Models\Story.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

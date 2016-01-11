@@ -12,19 +12,22 @@ namespace djMoney.Controllers
         // GET: Home
         [HttpGet]
         public ActionResult Index()
-        {           
+        {
             BaseConnect conn = new BaseConnect();
-            string query = "SELECT * FROM story LIMIT 10";
-          
+            Story story = new Story(conn);
+            //string query = "SELECT * FROM story LIMIT 10";
+            Article[] art;
             string getID = (string)RouteData.Values["id"];
             if (getID != null)
             {
-                getID = (int.Parse(getID) * 10).ToString();
-                query = "SELECT * FROM story LIMIT "+getID+", 10";
+                int getIntID = int.Parse(getID) * 10;
 
+                //query = "SELECT * FROM story LIMIT "+getID+", 10";
+                art = story.SelStoryLimitId(getIntID);
             }
-           
-            Article[] art = conn.SelStory(query);
+            else
+                art =  story.SelStoryLimitId(0);
+                //conn.SelStory(query);
             ViewBag.Art = art;
             ViewBag.ArtCount = art.Count();
             return View();
