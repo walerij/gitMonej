@@ -42,7 +42,10 @@ namespace djMoney.Models
             foreach (DataRow row in table.Rows)
             {
                 if (i == N) break;
-                art[i] = new Article(row["title"].ToString(), row["post_date"].ToString(), row["story"].ToString(), row["likes"].ToString());
+                art[i] = new Article(row["title"].ToString(), 
+                                     row["post_date"].ToString(), 
+                                     row["story"].ToString(), 
+                                     row["likes"].ToString());
 
                 i++;
             }
@@ -51,14 +54,15 @@ namespace djMoney.Models
 
 
         /// <summary>
-        /// Возращает выборку по LIMITED начиная с  id
+        /// Возращает выборку  LIMITED начиная с  id по count штук
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">начиная с этого числа выборка</param>
+        /// <param name="count">количество выбираемых записей</param>
         /// <returns></returns>
-        public Article[] SelStoryLimitId(int id)
+        public Article[] SelStoryLimitId(int id, int count)
         {
             string query = "SELECT * FROM story ";
-            query = query + " LIMIT " + id + " , 10";
+            query = query + " LIMIT " + id + " , "+count+" ";
 
             try {
                 art = SelStory(query);//правильное выполнение - art заполняется данными
@@ -71,6 +75,31 @@ namespace djMoney.Models
             return art;
 
         }
+
+
+        /// <summary>
+        /// Выбрать одну запись по id
+        /// </summary>
+        /// <param name="id">значение поля id таблицы story</param>
+        /// <returns></returns>
+         public Article[] SelStoryByID(int id)     
+         {
+            string query = "SELECT * FROM story WHERE id = "+id;
+         
+            try
+            {
+                art = SelStory(query);//правильное выполнение - art заполняется данными
+            }
+            catch
+            {
+                return art; //возвращается пустой art
+
+            }
+
+            return art;
+
+        }
+
 
 
 
