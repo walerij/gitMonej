@@ -6,31 +6,37 @@
 <h2>@ViewBag.GetID</h2>
 
 
-@for (int i = 0; i < ViewBag.ArtCount; i++){
-    <div class="col-lg-pull-8 nav-pills">
-        
-        <div class="ArticleHeader">
-            <div class="znk">
-                <ul class="nav nav-pills">
-                    <li class="active">
-                        <a href="" title="">@ViewBag.Art[i].price</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <a href="" title="Прочитайте сразу" >@ViewBag.Art[i].Title</a> 
-        </div>
-        <div class="col-lg-pull-4 ArticleDate">
-          @ViewBag.Art[i].post_date
-        </div>
-        <div class="col-lg-pull-4 nav-pills ArticleContent">
-           @ViewBag.Art[i].Context
-        </div>
-        <ul class="nav nav-pills ArticleLike">
-          
-            <li>@Html.ActionLink("Нравится", "Index", "Home")</li>
+@for (int i = 0; i < ViewBag.ArtCount; i++)
+{
 
-        </ul>
+    <div class="col-md-2">
+        <h3><span class="label label-primary">@ViewBag.Art[i].id </span></h3>
     </div>
+    <div class="col-md-10">
+        <a href="http://www.fformula.net/www.djmoney.info/index.php?id=54" title="54">
+            <h3>@ViewBag.Art[i].Title</h3>
+        </a>
+        <div> @ViewBag.Art[i].post_date </div>
+        <div class="ArticleContent">@ViewBag.Art[i].Context
+           
+        </div>
+        <div class="likePanel">
+           <ul>
+               <li>
+                   <a href="#" class="likeStory" title="Мне нравится">
+                       <span>Like</span>
+                   </a>
+               </li>
+               <li>@ViewBag.Art[i].price</li>
+               <li>&nbsp; &nbsp;</li>
+               <li>
+                 <a href="#" class="facebook" title="facebook"><span>Like</span></a>
+               </li>
+               <li><a href="#" class="twitter" title="twitter"><span>Like</span></a> </li>
+               <li><a href="#" class="youtube" title="youtube"><span>Like</span></a> </li>
+           </ul>
+        </div>
+     </div>
+
 }
 

@@ -45,7 +45,8 @@ namespace djMoney.Models
                 art[i] = new Article(row["title"].ToString(), 
                                      row["post_date"].ToString(), 
                                      row["story"].ToString(), 
-                                     row["likes"].ToString());
+                                     row["likes"].ToString(),
+                                     row["id"].ToString());
 
                 i++;
             }
@@ -99,6 +100,7 @@ namespace djMoney.Models
             return art;
 
         }
+
 
 
 

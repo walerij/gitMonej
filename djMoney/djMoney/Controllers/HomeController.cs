@@ -27,7 +27,7 @@ namespace djMoney.Controllers
             string getID = (string)RouteData.Values["id"];
             if (getID != null)
             {
-                int getIntID = int.Parse(getID) * 10;
+                int getIntID = (int.Parse(getID)-1) * 10;
                 art = story.SelStoryLimitId(getIntID,10);
             }
             else
@@ -56,7 +56,7 @@ namespace djMoney.Controllers
         {
             Random rand = new Random();
       
-            int id = rand.Next(1, 60); 
+            int id = rand.Next(0, 60); 
             story = new Story(conn);
             ViewBag.Art = story.SelStoryByID(id);
             ViewBag.ArtCount = 1;

@@ -43,12 +43,7 @@ footer { clear:both;
     font-size: 	11px;
     line-height: 18px;
 }
-.ArticleContent {
-    font: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
-    font-size: 16px;
-    font-weight:400;
-    margin-left: 62px;
-}
+
 .znk { float: left; margin-top:0; margin-right: 10px;
        padding-top:0;
        
@@ -62,3 +57,96 @@ footer { clear:both;
 }
 .headerMy { background: #ffffff;
 }
+
+/**для нового дизайна*/
+
+
+*{margin:0; padding:0;}
+body{
+	width:100%; min-height:600px; margin:auto;}
+#maket { width:100%; margin:auto;
+}
+
+#logo {
+    background: url(../Resources/djmoney.png) no-repeat;
+    height: 130px;
+}
+#aphorizm{
+	/*font-family: 'Lobster', cursive;*/
+	font-family: 'Roboto Slab', serif;
+	font-size: 22px;
+	margin-top: 10px;
+	}
+#logo a{ display: block; 
+              height: 100%; 
+              width:100%}
+#navmenu{clear:both; height: 40px;}			  
+#FormSearch{
+	
+	margin-top: 30px;}
+#searchText{
+	
+	border: none;
+	border-bottom: 1px solid #4D41EC;
+	color: #938E8E; 
+	}
+#search{
+	
+	background:url(../Resources/search1.png) no-repeat;
+	width:  24px; 
+	height:24px;
+	
+	border: none;
+	
+	}
+	
+	
+#footer{clear:both;
+padding-top: 20px;
+height: 170px;
+
+}
+
+.ArticleContent{
+	
+	font: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+	font-size: 16px;
+	font-weight:400;
+	line-height: 25px;
+	margin-top:10px;
+	
+	
+	}
+.likePanel{
+		font-size:12px;
+		color: #C5C1C1;
+        margin-top:10px;
+        margin-bottom: 10px;
+        }
+	.likePanel li{ list-style: none; float: left}	
+.likeStory {
+			background: url(../Resources/ok.png) no-repeat;
+			width: 16px;
+			height: 16px;	
+					}
+.likeStory span, .facebook span, .twitter span, .youtube span{ 
+	          width: 100%;
+			height: 100%; 
+			visibility:hidden; 
+			}
+
+				
+.facebook{
+		background: url(../Resources/facebook.png) no-repeat;
+			width: 16px;
+			height: 16px;	
+	}
+	.twitter {
+			background: url(../Resources/twitter.png) no-repeat;
+			width: 16px;
+			height: 16px;	
+		}
+.youtube
+{	background: url(../Resources/youtube.png) no-repeat;
+			width: 16px;
+			height: 16px;	}		
