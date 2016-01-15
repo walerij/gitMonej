@@ -63,5 +63,38 @@ namespace djMoney.Controllers
             return View("Index");
 
         }
+
+        /// <summary>
+        /// выбор лучших историй
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetBestStory()
+        {
+            story = new Story(conn);
+
+            art =story.SelBestStory(10);
+            ViewBag.Art = art;
+            ViewBag.ArtCount = art.Count();
+
+            return View("Index");
+
+        }
+        /// <summary>
+        /// Выбор самых свежих историй (пока тоже 10)
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetNewStory()
+        {
+            story = new Story(conn);
+
+            art = story.SelNewStory(10);
+            ViewBag.Art = art;
+            ViewBag.ArtCount = art.Count();
+
+            return View("Index");
+
+
+        }
+
     }
 }

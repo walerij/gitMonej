@@ -101,8 +101,47 @@ namespace djMoney.Models
 
         }
 
+        /// <summary>
+        /// Выборка историй, набравших максимальное количество лайков в количестве count
+        /// </summary>
+        /// <param name="count">количество выводимых историй</param>
+        /// <returns></returns>
+        public Article[] SelBestStory(int count)
+        {
+            string query = "SELECT * FROM story ORDER BY likes DESC LIMIT "+count ; //выборка историй упорядоченных по полю LIKES по убыванию
 
+            try
+            {
+                art = SelStory(query);//правильное выполнение - art заполняется данными
+            }
+            catch
+            {
+                return art; //возвращается пустой art
+            }
 
+            return art;
+        }
+
+        /// <summary>
+        /// Выборка последних опубликованных историй (по последней дате публикации)
+        /// </summary>
+        /// <param name="count">количество историй</param>
+        /// <returns></returns>
+        public Article[] SelNewStory(int count)
+        {
+            string query = "SELECT * FROM story ORDER BY post_date DESC LIMIT " + count; //выборка историй упорядоченных по полю post_date по убыванию
+
+            try
+            {
+                art = SelStory(query);//правильное выполнение - art заполняется данными
+            }
+            catch
+            {
+                return art; //возвращается пустой art
+            }
+
+            return art;
+        }
 
 
 
