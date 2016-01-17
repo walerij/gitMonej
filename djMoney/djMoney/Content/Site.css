@@ -149,4 +149,8 @@ height: 170px;
 .youtube
 {	background: url(../Resources/youtube.png) no-repeat;
 			width: 16px;
-			height: 16px;	}		
+			height: 16px;	}
+
+.textAdd {
+    width: 200px;
+}	

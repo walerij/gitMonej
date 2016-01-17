@@ -96,5 +96,11 @@ namespace djMoney.Controllers
 
         }
 
+
+        public ActionResult AddStory()
+        {
+            return View();
+        }
+
     }
 }

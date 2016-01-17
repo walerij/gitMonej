@@ -143,6 +143,25 @@ namespace djMoney.Models
             return art;
         }
 
+        /// <summary>
+        /// добавление истории - пока void, так как я не знаю, куда это пойдет дальше
+        /// </summary>
+        public void AddStory() {
+            string query = "INSERT INTO story SET title='Заголовок', story='TextStory' ";
+            long insert;
+            try
+            {
+                insert = sql.Insert(query);
+            }
+            catch
+            {
+
+                insert = -1;
+            }
+
+
+        }
+
 
 
     }

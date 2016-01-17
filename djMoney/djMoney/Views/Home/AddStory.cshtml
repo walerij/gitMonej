@@ -1,0 +1,19 @@
+﻿@model djMoney.Models.Article
+
+@{
+    ViewBag.Title = "Добавить новую историю";
+}
+
+<h2>Добавление истории</h2>
+@using (Html.BeginForm())
+{
+    <div>
+       Заголовок истории @Html.TextBoxFor(x=>x.Title, new { @class = "form-control" })
+    </div>
+    <div>Текст истории @Html.TextAreaFor(x => x.Context, new { @class = "form-control", @rows=20})
+       
+    </div>
+    <input type="submit" name="StorySub" id="StorySub" class="active" value="Отправить" />
+
+
+}

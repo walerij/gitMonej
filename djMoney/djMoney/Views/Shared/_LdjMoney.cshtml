@@ -55,7 +55,10 @@
             </div>
             <div class="col-xs-5 navbar-default">
                 <ul class="nav nav-pills">
-                    <li><a href="#"><img src="~/Resources/pen.png" width="16" height="16" alt="" />ПРИСЛАТЬ ИСТОРИЮ</a></li>                    
+                    <li>
+                        @Html.ActionLink("ПРИСЛАТЬ ИСТОРИЮ", "AddStory", "Home")
+                       <!--<a href="#"><img src="~/Resources/pen.png" width="16" height="16" alt="" />ПРИСЛАТЬ ИСТОРИЮ</a>-->
+                    </li>                    
                 </ul>
             </div>
 
@@ -81,7 +84,7 @@
                         <li>@Html.ActionLink("5", "Index", "Home", new { area = "", id = 5 }, new { @class = "t1" })</li>
                     </ul>
                     <p>
-                        © 2016, команда djMoney. Проект компании Формула программиста. 18+
+                        © 2016, проект djMoney компании Формула программиста. 18+
                     </p>
                 </div>
 
