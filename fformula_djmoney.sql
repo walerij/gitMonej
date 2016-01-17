@@ -44,6 +44,9 @@ CREATE TABLE IF NOT EXISTS `newstory` (
 
 -- --------------------------------------------------------
 
+
+fformula_djmonej
+
 --
 -- Table structure for table `story`
 --

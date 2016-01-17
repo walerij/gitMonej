@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Web.Configuration;
+
 
 
 namespace djMoney.Models
@@ -18,8 +20,14 @@ namespace djMoney.Models
        protected MySqlConnection myconnection;
 
 
+        public MySQL()
+        {
+
+            this.connect = WebConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+        }
        public MySQL(string connect) {
            this.connect = connect;
+
        }
        public MySQL(string host, string baze, string user, string pass):this(
                  "SERVER=" + host

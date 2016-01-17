@@ -14,7 +14,8 @@ namespace djMoney.Models
 
         public BaseConnect()
         {
-            this.sql = new MySQL("localhost", "fformula_djmonej", "root", "");//инициализируем sql, заодно коннектимся к MySQL
+          
+            this.sql = new MySQL();//инициализируем sql, коннектимся к MySQL через настройки web config
         }
               
 

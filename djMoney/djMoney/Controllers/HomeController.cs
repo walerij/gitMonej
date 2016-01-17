@@ -96,10 +96,16 @@ namespace djMoney.Controllers
 
         }
 
-
+        [HttpGet]
         public ActionResult AddStory()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddStory(string q)
+        {
+            return View("Index");
         }
 
     }
