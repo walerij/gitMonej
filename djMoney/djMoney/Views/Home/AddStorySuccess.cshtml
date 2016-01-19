@@ -1,0 +1,11 @@
+﻿@model djMoney.Models.Article
+
+@{
+    ViewBag.Title = "Отлично";
+}
+
+<h2>Добавление истории прошло успешно</h2>
+<p>Ваша история добавлена</p>
+<p>Она называется <strong> @Model.Title</strong></p>
+<p>@Html.ActionLink("Вернуться на главную страницу", "Index", "Home")</p>
+

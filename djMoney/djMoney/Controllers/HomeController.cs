@@ -102,10 +102,21 @@ namespace djMoney.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult AddStory(string q)
+        public ActionResult AddStory(Article art)
         {
-            return View("Index");
+
+            if (ModelState.IsValid)
+            {
+                return View("AddStorySuccess", art);
+            }
+
+
+            return View(art);
+
+           
+              
         }
 
     }

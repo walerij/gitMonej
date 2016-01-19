@@ -142,6 +142,30 @@ namespace djMoney.Models
 
             return art;
         }
+ 
+
+
+        public Article[] SelStoryByFind(string find)
+        {
+            string query = @"SELECT * FROM story 
+                              WHERE story LIKE %'" + find + @"'%
+                                 OR title LIKE %'" + find + @"'%
+                                 OR    id  =  '" + find+@"' 
+                             ORDER BY post_date DESC"; //выборка историй, где какое-либо значение равно find упорядоченных по полю post_date по убыванию
+
+            try
+            {
+                art = SelStory(query);//правильное выполнение - art заполняется данными
+            }
+            catch
+            {
+                return art; //возвращается пустой art
+            }
+
+            return art;
+        }
+
+
 
         /// <summary>
         /// добавление истории - пока void, так как я не знаю, куда это пойдет дальше
