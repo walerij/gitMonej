@@ -106,9 +106,20 @@ namespace djMoney.Controllers
         [HttpPost]
         public ActionResult AddStory(Article art)
         {
+            story = new Story(conn);
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)//если модель валидна, всё заполнено верно
             {
+                if (story.AddStory(art) == -1)//если не добавилось 
+                {
+                    ViewBag.errorsql = story.error;
+                    ViewBag.query = story.query;
+                    return View("AddStoryFalse", art);
+
+                }
+                ViewBag.errorsql = story.error;
+                ViewBag.query = story.query;
+
                 return View("AddStorySuccess", art);
             }
 

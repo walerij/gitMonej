@@ -167,6 +167,8 @@ namespace djMoney.Models
            if (error == "") return false;
            else
            {
+                this.error = error;
+                this.query = query;
                return true;
            }
        }

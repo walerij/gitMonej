@@ -19,6 +19,9 @@ namespace djMoney.Models
         protected BaseConnect conn;
         protected MySQL sql;
         public Article[] art;
+        public string error { get; private set; }
+        public string query { get; private set; }
+
         public Story(BaseConnect conn)
         {
             this.conn = conn;
@@ -168,10 +171,15 @@ namespace djMoney.Models
 
 
         /// <summary>
-        /// добавление истории - пока void, так как я не знаю, куда это пойдет дальше
+        /// добавление истории - long
         /// </summary>
-        public void AddStory() {
-            string query = "INSERT INTO story SET title='Заголовок', story='TextStory' ";
+        public long AddStory(Article art) {
+             query = @"INSERT INTO story SET 
+                                   title='" + sql.addslashes(art.Title) + @"', 
+                                   status='list',
+                                   likes='0',
+                                   post_date='" + sql.addslashes(DateTime.Now.ToString(@"yyyy-MM-dd HH:mm:ss"))+ @"',
+                                   story='" + sql.addslashes(art.Context) + @"' ";
             long insert;
             try
             {
@@ -179,10 +187,11 @@ namespace djMoney.Models
             }
             catch
             {
-
+                error = sql.error;
+                query = sql.query;
                 insert = -1;
             }
-
+            return insert;
 
         }
 
